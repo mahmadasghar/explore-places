@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins' sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(9,0,77,0.65),rgba(9,0,77,0.65)),url(background.png);
+    background-position: center;
+    background-size: cover;
+    padding: 10px 8%;
+}
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay:1.3s;
+}
+
+.logo{
+    width: 180px;
+    cursor: pointer;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay:1s;
+}
+nav ul{
+    list-style: none;
+    width: 100%;
+    text-align: right;
+    padding-right: 60px;
+}
+nav ul li{
+    display: inline-block;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    transition: .5s;
+}
+ul li a:hover{
+    color: orange;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    background: #f5168d;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .5s;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay:1.3s;
+}
+.btn:hover{
+    background: orange;
+    color: #000;
+}
+.btn img{
+    width: 20px;
+    margin-right: 10px;
+}
+.content{
+    margin-top: 14%;
+    color: #fff;
+    max-width: 620px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay:1.3s;
+}
+.content h1{
+    font-size: 70px;
+    font-weight: 600;
+    line-height: 85px;
+    margin-bottom: 25px;
+}
+.content form{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 30px;
+}
+.content form input{
+    border: 0;
+    outline: 0;
+    width: 100%;
+    font-size: 16px;
+    padding-left: 10px;
+}
+.content form .btn{
+    font-size: 15px;
+    padding: 10px 30px;
+}
+/*KEYFRAMES ANIMATION*/
+@keyframes slideRight{
+    0% {
+        transform: translateX(-100px);
+        opacity:0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
